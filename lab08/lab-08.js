@@ -15,6 +15,7 @@ $("#mySelect").on("change", function(){
 
 button.addEventListener("click", function(){
     getInput();
+    displayImages();
 })
 
 function getInput(){
@@ -28,5 +29,19 @@ function getInput(){
         alert("Maximum number of tries exceeded")
     } else{
         alert("Welcome " + input)
+    }
+}
+
+function displayImages(name){
+    var reply = prompt("Display all images?").toLowerCase()
+    if(reply === "yes" || reply === "y"){
+        let div = document.querySelector("#button").innerHTML.indexOf("img")
+        for(let i = 0; i< images.length; i++){
+            if(div === -1){
+                document.querySelector("#prompt").insertAdjacentHTML("afterend", "<img src = " + images[i] + " style = 'width : 250px; height:200px; display: inline'>")
+            } else{
+                alert("All images are already displayed")
+            }   
+        }
     }
 }
