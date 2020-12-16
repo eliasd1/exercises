@@ -24,7 +24,7 @@ function getInput(){
         input = prompt("Please try again")
         count++;
     }
-    if(count === 5){
+    if(count === 4){
         alert("Maximum number of tries exceeded")
     } else{
         alert("Welcome " + input)
