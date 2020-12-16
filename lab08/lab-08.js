@@ -14,6 +14,7 @@ $("#mySelect").on("change", function(){
 })
 
 button.addEventListener("click", function(){
+    document.querySelectorAll("#button img").forEach(img => img.remove())
     getInput();
     displayImages();
 })
@@ -21,7 +22,7 @@ button.addEventListener("click", function(){
 function getInput(){
     var input = prompt("What is your name?")
     var count = 0;
-    while(Number(input) && count < 4){
+    while(!isNaN(input) && count < 4){
         input = prompt("Please try again")
         count++;
     }
@@ -32,16 +33,13 @@ function getInput(){
     }
 }
 
-function displayImages(name){
-    var reply = prompt("Display all images?").toLowerCase()
-    if(reply === "yes" || reply === "y"){
-        let div = document.querySelector("#button").innerHTML.indexOf("img")
-        for(let i = 0; i< images.length; i++){
-            if(div === -1){
-                document.querySelector("#prompt").insertAdjacentHTML("afterend", "<img src = " + images[i] + " style = 'width : 250px; height:200px; display: inline'>")
-            } else{
-                alert("All images are already displayed")
-            }   
-        }
+function displayImages(){
+    var reply = prompt("Pick a number from 1-4")
+    while(isNaN(reply) || (Number(reply) < 1) || (Number(reply) > 4)){
+        reply = prompt("Please try again. Enter a number from 1-4")
     }
+    for(let i = 0; i< reply; i++){
+            document.querySelector("#prompt").insertAdjacentHTML("afterend", "<img src = " + images[i] + " style = 'width : 250px; height:200px; display: inline'>")
+    } 
 }
+
