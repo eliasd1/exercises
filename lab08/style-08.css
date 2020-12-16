@@ -1,0 +1,41 @@
+*{
+    color: #585858
+  }
+  body{
+    background-color:#282828;
+  }
+  .container ul li{
+    color: black;
+  }
+  #brand{
+    font-size: 1.25em;
+  }
+  li{
+      display: inline;
+      margin:0 50px
+    }
+  #search{
+    float: right;
+    opacity: 0.125;
+  }
+  
+  img{
+    display:block;
+    margin:0 auto;
+  }
+  .container{
+    margin:0 10%;
+  }
+  #details{
+    text-align:center;
+  }
+  #info{
+    margin-top: 250px;
+  }
+  #mySelect{
+    display:block;
+    margin: 0 auto;
+  }
+  #backgroundColor{
+    text-align:center;
+  }
