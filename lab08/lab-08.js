@@ -20,7 +20,7 @@ button.addEventListener("click", function(){
 function getInput(){
     var input = prompt("What is your name?")
     var count = 0;
-    while(Number(input) && count < 5){
+    while(Number(input) && count < 4){
         input = prompt("Please try again")
         count++;
     }
