@@ -42,4 +42,3 @@ function displayImages(){
             document.querySelector("#prompt").insertAdjacentHTML("afterend", "<img src = " + images[i] + " style = 'width : 250px; height:200px; display: inline'>")
     } 
 }
-
