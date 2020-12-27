@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <style>
+        h1{
+            background-color: red;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Class 1 Lab</h1>
+    </header>
+    <main>
+        <p style = "background-color: yellow; color:black;">What is your name?</p>
+        <p style= "background-color: black; color: white;">Where are you from?</p>
+        <p style = "background-color: orange; color: brown;">What is your favorite food?</p>
+        <p style = "background-color: purple; color: yellow;">Where do you spend your holidays?</p>
+        <p>A <dfn>black hole</dfn> is a region of space from
+            which nothing, not even light, can escape.</p>
+    </main>
+    <footer>
+        <p>Made by Elias</p>
+    </footer>
+    <script>
+        var name = prompt("What is your name?")
+        console.log(name)
+
+        var country = prompt("Where are you from?")
+        console.log(country)
+
+        var favoriteFood = prompt("What is your favorite food?")
+        console.log(favoriteFood)
+
+        var holidayLocation = prompt("Where do you spend your holidays?")
+        console.log(holidayLocation)
+
+        alert(`Hello, ${name} from ${country}, I also like ${favoriteFood} while on vacation in ${holidayLocation}`)
+    </script>
+</body>
+</html>
